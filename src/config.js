@@ -1,11 +1,14 @@
 import {config as dotenv} from 'dotenv';
+const REACT_APP_DB_HOST = process.env.REACT_APP_DB_HOST
+const REACT_APP_DB_USER = process.env.REACT_APP_DB_USER
+const REACT_APP_PASSWORD = process.env.REACT_APP_PASSWORD
 dotenv();
 
 export const config = {
-    host: process.env.DB_HOST || 'localhost',
-    user: process.env.DB_USER || 'root',
-    password: process.env.PASSWORD || '',
-    database: process.env.DB || 'test',
+    host: REACT_APP_DB_HOST || 'localhost',
+    user: REACT_APP_DB_USER || 'root',
+    password: REACT_APP_PASSWORD || '',
+    database: 'tasksdb' || 'test',
     ssl: {
         rejectUnauthorized: false
     }
@@ -13,8 +16,8 @@ export const config = {
 
 // export const config = {
 //     host: "t2bkwyjck6bw.aws-sa-east-1-1.psdb.cloud",
-//     user: "a9dhb0t5ksso",
-//     password: "pscale_pw_J0CminD5flr1iZZDscllnICqVH_hUZ5lNDfirAdFUDc",
+//     user: "215zzoe2gvw6",
+//     password: "pscale_pw_zacWK0FXw7xRT23iLbpVVmS-JhH4cTCiUkeCJgv9xXU",
 //     database: "tasksdb",
 //     ssl: {
 //         rejectUnauthorized: false
