@@ -1,5 +1,6 @@
-import app from './app';
+import app from "./app";
 
-const port = 3000;
-app.listen(port);
-console.log('Server running on port ' + port);
+const port = process.env.PORT || 8080;
+app.listen(port, function () {
+  console.log("app running on port 8080");
+});
