@@ -166,10 +166,13 @@ var saveTask = /*#__PURE__*/function () {
 
           case 2:
             db = _context4.sent;
-            _context4.next = 5;
+            console.log(JSON.stringify(req.body), 'stringify');
+            console.log(req.body, 'req');
+            console.log(res.body, 'RES');
+            _context4.next = 8;
             return db.query('INSERT INTO tasks(title, description) VALUES(?,?)', [req.body.title, req.body.description]);
 
-          case 5:
+          case 8:
             _yield$db$query7 = _context4.sent;
             _yield$db$query8 = _slicedToArray(_yield$db$query7, 1);
             results = _yield$db$query8[0];
@@ -177,7 +180,7 @@ var saveTask = /*#__PURE__*/function () {
               id: results.resultId
             }, req.body));
 
-          case 9:
+          case 12:
           case "end":
             return _context4.stop();
         }
