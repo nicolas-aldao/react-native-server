@@ -23,6 +23,8 @@ export const getTaskCount = async (req, res) => {
 }
 export const saveTask = async (req, res) => {
     const db = await connect();
+    console.log('asdd' + [req.body.title, req.body.description]);
+    
     const [results] = await db.query('INSERT INTO tasks(title, description) VALUES(?,?)',
     [req.body.title, req.body.description]);
     res.json({
