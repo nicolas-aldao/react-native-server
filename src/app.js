@@ -12,8 +12,8 @@ const specs = swaggerJsdoc(options)
 
 const app = express();
 app.use(cors());
+app.use(express.json());
 app.use(morgan('dev'));
-app.use(express.json())
 app.use(tasksRoutes);
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
