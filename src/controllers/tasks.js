@@ -1,7 +1,7 @@
 import {connect} from '../db';
 
 export const home = (req, res) => {
-    res.send('My Home site');
+    res.send('My Home site deployed');
 }
 export const getTask = async (req, res) => {
     const db = await connect();
